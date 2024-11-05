@@ -70,6 +70,8 @@ class IGSExporter(Operator, ExportHelper):
             patches.append({"coefs": np_patch.tolist(), "deg_u": spline.order_v-1,"deg_v": spline.order_u-1})
 
         f = open(filepath, 'w', encoding='utf-8')
+        f.write("copyright(c)Jorg Peters [jorg.peters@gmail.com]                         S      1\n")
+        f.write(",,;                                                                     G      1\n")
 
         flen = [0 for _ in range(4)]
         t_Bbctr, t_Ffctr = 1, 1
